@@ -3,7 +3,21 @@ import styled from 'styled-components';
 import { Arrow90degRight } from "styled-icons/bootstrap";
 import BotImage from "../../assets/bot.png"
 
+import {Axios} from "../../utilities/Axios/Axios"
+
 const Shorter = () => {
+
+    const [data,setData] = React.useState({
+        message: "Data yüklendi",
+        status: false
+    });
+
+    const linkSendHandler = () => {
+        Axios.get("https://talharic-url-shortener.herokuapp.com/").then(
+            res => console.log(res.data)
+        )
+    } 
+
     return (
         <PaddingBox>
             <div style={{flex:1}} >
@@ -12,9 +26,10 @@ const Shorter = () => {
                 <CustomInput>
                     <input type= "text" placeholder = "URL Giriniz"/>
                 </CustomInput>
-                <Button>
-                    <span>Kısalt</span>
-                </Button>
+                <Button
+                    onClick = {linkSendHandler}
+                    ><span>Kısat</span>
+                    </Button>
             </div>
             <RightSide>
                 <img src={BotImage} alt=""/>

@@ -1,4 +1,7 @@
 # Url Shortener with React
+
+![React](https://i.hizliresim.com/91pde5k.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

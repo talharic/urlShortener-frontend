@@ -6,18 +6,14 @@ import {Home,InfoCircle} from "styled-icons/fa-solid"
 const Navbar = () => {
     return <div>
         <NavbarContent>
-            <h1>urlShortener</h1>
+            <h1>URL Shortener</h1>
             <ul>
                 <li>
-                    <Home style={{
-                        width:30
-                    }}/>
+                    <Home/>
                     Anasayfa
                 </li>
                 <li>
-                    <InfoCircle style={{
-                        width:30
-                    }}/>
+                    <InfoCircle/>
                     Hakkımızda
                 </li>
             </ul>
@@ -31,7 +27,6 @@ const NavbarContent = styled.div`
     justify-content:space-between;
     align-items:center;
     h1{
-        font-family: 'Anton', sans-serif;
         color: white;
         margin-left:30px
     }
@@ -47,8 +42,8 @@ const NavbarContent = styled.div`
             align-items:center;
             
             svg{
-                width:20px;
                 margin-right:10px;
+                width:20px;
             }
         }
     }
